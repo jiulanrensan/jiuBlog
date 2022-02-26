@@ -5,7 +5,7 @@
 > 
 
 ## 背景
-项目小程序点击加购时，会绘制一个抛物线动画。看图
+项目小程序里，点击加购成功时，加购按钮向上抛出一个小球，掉落在左侧悬浮购物车上，轨迹为抛物线。看图
 
 <center>
   <img style="border-radius: 0.3125em;
@@ -15,7 +15,7 @@
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
   color: #999;
-  padding: 2px;">购物车抛物线</div>
+  padding: 2px;">抛物线gif</div>
 </center>
 
 gif图掉帧非常严重，不过在安卓真机上，掉帧确实很明显。
@@ -256,10 +256,33 @@ con.onclick = function () {
 ### 用wxs作动画优化
 wxs提供一个[requestAnimationFrame](https://developers.weixin.qq.com/miniprogram/dev/framework/view/interactive-animation.html)API，与浏览器上的一致。
 所以我们修改成，当点击加购时，把点击坐标与目标坐标传入`wxs`，然后计算运行轨迹点的坐标计算，接着用`requestAnimationFrame`执行动画帧
+```html
+<!-- wxml -->
+<wxs module="cartAnimation" src="./cartAnimation.wxs"></wxs>
+<!-- cartAndClickCoord: 包含两个坐标：点击坐标即起点坐标，还有购物车坐标即终点坐标 -->
+<view class="cart-animation" change:prop="{{cartAnimation.cartObserver}}" prop="{{cartAndClickCoord}}">
+  <image class="cart-animation-image" src="{{cartPic}}"></image>
+</view>
+```
 ```js
-// wxs
+// cartAnimation.wxs
+var ins
+var curCoordIdx
+var coordArr
+
+/**
+ * @desc 根据传入的起始点坐标计算生成贝塞尔曲线
+ * @param {Object} cartCoord 购物车坐标 {cartX, cartY, cartW}
+ * @param {Object} clickCoord 点击坐标 {clientX, clientY}
+ */
+function genBezierCurve(cartCoord, clickCoord) {
+  // 省略生成贝塞尔曲线代码
+  // return bezierList
+}
+
 function executeCartAnimation () {
   curCoordIdx = coordArr.length - 1
+  // 使用requestAnimationFrame
   ins.requestAnimationFrame(setStyleByFrame)
 }
 
@@ -277,6 +300,20 @@ function setStyleByFrame() {
       display: 'none'
     })
   }
+}
+// 每次监听到变化时，执行动画
+function cartObserver (newV, oldV, ownerInstance, instance) {
+  if (!newV) return
+  ins = ownerInstance
+  var cartCoordData = newV.cartCoordData
+  var clickCoordData = newV.clickCoordData
+  // 根据起始坐标和重点坐标生成贝塞尔曲线数据
+  coordArr = genBezierCurve(cartCoordData, clickCoordData)
+  executeCartAnimation()
+}
+
+module.exports = {
+  cartObserver: cartObserver
 }
 ```
 在真机上效果非常明显，低端安卓机上的动画也非常丝滑。
