@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <block wx:for="{{goodsList}}" wx:key="index" wx:for-item="subItemList">
+    <block wx:for="{{subItemList}}" wx:key="name">
+      <view class="item">{{item.name}}</view>
+    </block>
+  </block>
+  <view id="observer" class="bottom"></view>
+</view>

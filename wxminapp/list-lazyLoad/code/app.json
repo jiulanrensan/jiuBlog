@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/third/index",
+    "pages/second/index",
+    "pages/first/index"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

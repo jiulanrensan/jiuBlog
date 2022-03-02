@@ -1,0 +1,7 @@
+/**index.wxss**/
+.item{
+  width: 100%;
+  height: 200rpx;
+  margin: 40rpx 0 ;
+  background-color: aqua;
+}
