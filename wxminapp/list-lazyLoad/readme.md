@@ -351,7 +351,8 @@ Page({
 
 当然需求是不断变化的，下次就不一定是售罄非售罄了，但是万变不离其宗，再怎么分，把每一项的数组长度定好之后，再生成渲染的`renderList`就可以了。所以可以把懒加载的这块逻辑抽离出来封装。
 
-
+# demo源码
+[以上三个demo的完整代码](https://github.com/jiulanrensan/jiuBlog/tree/main/wxminapp/list-lazyLoad/code)
 
 # 参考
 - [1] [小程序IntersectionObserver文档](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/IntersectionObserver.html)
