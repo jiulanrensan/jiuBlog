@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <custom-pull-down class="custom-pull-down">
+    <view name="refresh-animation"></view>
+    <view slot="refresh-before-trigger" class="custom-refresh-zone-tips-loading">继续下拉刷新</view>
+    <view slot="refresh-after-trigger" class="custom-refresh-zone-tips-loading">释放刷新</view>
+    <view slot="refresh-loading" class="custom-refresh-zone-tips-loading">加载中</view>
+    <view slot="content">
+      <block wx:for="{{goodsList}}" wx:key="key">
+        <view class="goods-item">
+          <view >{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+    
+  </custom-pull-down>
+</view>

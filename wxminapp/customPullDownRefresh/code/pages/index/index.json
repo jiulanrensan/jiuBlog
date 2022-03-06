@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "custom-pull-down": "../../component/customPullDown"
+  }
+}
