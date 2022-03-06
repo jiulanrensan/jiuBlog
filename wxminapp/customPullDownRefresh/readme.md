@@ -294,6 +294,9 @@ onPullDownRefresh (event) {
 
 大功告成！
 
+# 完整Demo
+[源码地址](https://github.com/jiulanrensan/jiuBlog/tree/main/wxminapp/customPullDownRefresh/code)
+
 # 参考
 - [1] [小程序插槽](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html)
 - [2] [scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html)
