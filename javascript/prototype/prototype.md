@@ -34,7 +34,7 @@ aFn.prototype.constructor === aFn
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/proto1.png">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/proto1.png">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -57,7 +57,7 @@ a1.__proto__ === aFn.prototype
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/proto2.png">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/proto2.png">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -78,7 +78,7 @@ aFn.prototype
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/proto3.png">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/proto3.png">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -91,7 +91,7 @@ aFn.prototype
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/proto5.png">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/proto5.png">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -134,7 +134,7 @@ Function.prototype.__proto__ === Object.prototype // true
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/内置函数原型.jpg">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/内置函数原型.jpg">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -189,7 +189,7 @@ Function.__proto__ === Function.prototype // true
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/原型链.jpg">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/原型链.jpg">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;

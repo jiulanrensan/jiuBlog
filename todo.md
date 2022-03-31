@@ -12,4 +12,10 @@ https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Object_prototy
 
 类型判断: toString,instanceof,typeof
 
-## 内置对象上的toString和valueof
+## 继承
+
+## 深拷贝
+
+## error类型
+
+## responseType arraybuffer blob

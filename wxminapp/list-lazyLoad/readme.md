@@ -9,7 +9,7 @@
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/20220228110622.png">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/20220228110622.png">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -49,7 +49,7 @@ Page({
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/列表懒加载.gif">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/列表懒加载.gif">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -329,7 +329,7 @@ Page({
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/20220302142205.png">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/20220302142205.png">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -341,7 +341,7 @@ Page({
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/列表动态懒加载动图.gif">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/列表动态懒加载动图.gif">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;

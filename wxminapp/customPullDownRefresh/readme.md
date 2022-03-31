@@ -62,7 +62,7 @@ Page({
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/20220305194510.png">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/20220305194510.png">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -107,7 +107,7 @@ Page({
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/第一版下拉刷新.gif">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/第一版下拉刷新.gif">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -141,7 +141,7 @@ Page({
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/刷新样式自定义.gif">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/刷新样式自定义.gif">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
@@ -284,7 +284,7 @@ onPullDownRefresh (event) {
 <center>
   <img style="border-radius: 0.3125em;
   box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
-  src="https://gitee.com/jlrszxc/pic-go-images/raw/master/images/完整demo.gif">
+  src="https://github.com/jiulanrensan/picGoImages/blob/main/images/完整demo.gif">
   <br>
   <div style="color:orange; border-bottom: 1px solid #d9d9d9;
   display: inline-block;
