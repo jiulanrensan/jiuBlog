@@ -92,10 +92,91 @@ b = new Uint16Array(1)
 
 ![](https://github.com/jiulanrensan/picGoImages/blob/main/images/TypedArray%E7%A4%BA%E6%84%8F%E5%9B%BE3.png?raw=true)
 
-再说一下`Int8Array`，表示范围是`-128`-`127`，因为是用8位二进制有符号整数描述，要预留最左边一位表示符号，所以剩余7位表示数据，即`parseInt('01111111',2)` 的得到127
+再说一下`Int8Array`，表示范围是`-128`-`127`，因为是用8位二进制有符号整数描述，要预留最左边一位表示符号，所以剩余7位表示数据，即`parseInt('01111111',2)` 的得到127。
+
+`TypedArray`有一个很特殊的`Uint8ClampedArray`(8 位无符号整型固定数组)，它和`Uint8Array`最大的差别在于，`Uint8ClampedArray`数组里每一项只能在0-255之间。如果你指定一个在 `[0,255]` 区间外的值，它将被替换为 0 或 255。rgb颜色值的范围也是在这个范围内，所以`Uint8ClampedArray`经常用于canvas或者图片处理上，用来表示图片的像素信息
 
 
 其余构造函数的详细内容可以查看[TypedArray 对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_%E5%AF%B9%E8%B1%A1)
+
+## [DataView](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+DataView相比TypedArray 优点在哪 ？字节序问题是什么？
+
+DataView提供了很多方法，这里挑两对作为例子：`setUint8`和`getUint8`，`setUint16`和`getUint16`
+
+### `setUint8`和`getUint8`
+```js
+// 创建ArrayBuffer，长度为4个字节
+const buffer = new ArrayBuffer(4);
+
+const dataView = new DataView(buffer);
+
+// 将DataView中第一个字节设置为1(这里的1为十进制)
+dataView.setUint8(0, 1);
+
+// 将DataView中第二个字节设置为2(这里的2为十进制)
+dataView.setUint8(1, 2);
+```
+
+![](https://github.com/jiulanrensan/picGoImages/blob/main/images/dataView%E7%A4%BA%E6%84%8F%E5%9B%BE1.png?raw=true)
+
+```js
+// 同理，取第一个字节，返回十进制结果1
+dataView.getUint8(0);
+```
+
+### `setUint16`和`getUint16`
+还是用上面已经设置好的ArrayBuffer数组，此时：
+```js
+dataView.getUint16(0); // output: 258
+```
+这是因为这里是16位即两个字节作为一项
+
+![](https://github.com/jiulanrensan/picGoImages/blob/main/images/dataView%E7%A4%BA%E6%84%8F%E5%9B%BE2.png?raw=true)
+
+等同于
+```js
+parseInt('0000000100000010', 2) // 258
+```
+
+
+## [Blob](https://developer.mozilla.org/zh-CN/docs/Web/API/Blob)
+> Blob 对象表示一个不可变、原始数据的类文件对象(Binary large object)
+
+概念似懂非懂，那blob和ArrayBuffer都是表示二进制数据，那有什么区别呢？
+
+### 区别
+在 [stackoverflow](https://stackoverflow.com/questions/11821096/what-is-the-difference-between-an-arraybuffer-and-a-blob) 上找到一个不错的解释：
+
+除非你需要写/编辑的能力(使用ArrayBuffer)，那么Blob格式会是最好的选择。
+
+* 是否可变
+  * `ArrayBuffer`可以改变(通过DataView/TypedArray)
+  * `Blob`是不可变的
+
+* 在内存(Memory)中的来源/可用性
+  * `ArrayBuffer`是在内存中的，可以手动操作
+  * `Blob`可以在磁盘上，可以缓存在内存中(in the cache memory)，和其他不容易读取的地方
+
+* 获取
+  * `ArrayBuffer`可以通过`TypedArrays`获取
+  * `Blob`可以通过`window.URL.createObjectURL`获取，或者`FileReader`
+
+* 转换
+  * `ArrayBuffer` => `Blob`: `new Blob([new Uint8Array(data)])`
+  * `Blob` => `ArrayBuffer`: `await blob.arrayBuffer()`
+
+* 通讯协议中
+  * websocket: [webSocket.binaryType](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/binaryType)
+  * xhr: `responseType`: 告诉服务器期望拿到什么类型的响应，有: "arraybuffer", "blob", 其他的有"document", "json", "text"
+
+### Blob api
+`Blob.slice`: 返回一个新的 Blob 对象，包含了源 Blob 对象中指定范围内的数据
+
+
+## [File](https://developer.mozilla.org/zh-CN/docs/Web/API/File)
+`File`是特殊类型的`Blob`，来源于`input`标签选择文件后返回的对象，继承了`Blob.slice`方法
+
 
 # 参考
 - [1] [What is the difference between an ArrayBuffer and a Blob?](https://stackoverflow.com/questions/11821096/what-is-the-difference-between-an-arraybuffer-and-a-blob)
