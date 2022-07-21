@@ -11,8 +11,8 @@
 * [new以及模拟实现](https://github.com/jiulanrensan/jiuBlog/blob/main/javascript/new/new.md)
 * [es5中的继承](https://github.com/jiulanrensan/jiuBlog/blob/main/javascript/prototype/Inheritance_in_es5.md)
 * [es6中的继承](https://github.com/jiulanrensan/jiuBlog/blob/main/javascript/prototype/Inheritance_in_es6.md)
-
 * [JS中的二进制](https://github.com/jiulanrensan/jiuBlog/blob/main/javascript/binaryInJS/index.md)
+* [微任务执行顺序的总结](https://github.com/jiulanrensan/jiuBlog/blob/main/javascript/eventLoop/microTask.md)
 
 ## 微信小程序
 * [小程序动画优化实践](https://github.com/jiulanrensan/jiuBlog/tree/main/wxminapp/animationOptimization)
