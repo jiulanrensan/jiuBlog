@@ -1,8 +1,3 @@
-# 从v8去解释
-
-## 闭包
-https://zhuanlan.zhihu.com/p/469049684
-
 ## 原型链
 https://my.oschina.net/u/4581713/blog/4375008
 
@@ -33,3 +28,5 @@ huksy
 lint-stage
 
 commitizen
+
+[babel](https://www.jiangruitao.com/babel/rudiments/) 
